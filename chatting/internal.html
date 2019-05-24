@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+  <title>Admin Panel</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" id="brandname" href="#">Minicabee <i class="fa fa-taxi"></i> Admin</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <div class="nav navbar-nav padleft">
+       <div class="row">
+<div class="col-md-12">
+    
+</div>
+       </div>
+    </div>
+      <ul class="nav navbar-nav navbar-right navextra" >
+            <li><a onclick="openFullscreen();"  data-toggle="tooltip" data-placement="bottom" title="Full Screen" href="#"><span class="fa fa-expand"></span> Full Screen</a></li>
+            <li><a data-toggle="tooltip" data-placement="bottom" title="Notification" href="#"><span class="fa fa-bell"></span> Notification</a></li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Settings" href="#"><span class="fa fa-gear"></span> Settings</a></li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Logout" href="#"><span class="fa fa-power-off"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="sidenav">
+        <a href="index.html" class="active"><i class="fa fa-dashboard"></i> Dashboard</a>
+        <a href="bookrecord.html">Booking Records</a>
+        <a href="passrecord.html">Passenger Records</a>
+        <button class="dropdown-btn">Company Admin</button>
+              <div class="dropdown-container">
+                  <a href="bookanal.html">Booking Analytics</a>
+                <a href="staffacc.html">Staff Accounts</a>
+                <a href="prolist.html">Provider List</a>
+                <a href="cprofit.html">Company Profit</a>
+                <a href="fchange.html">Fare Changer</a>
+              </div>
+              <button class="dropdown-btn">Driver Management</button>
+              <div class="dropdown-container">
+                <a href="dlist.html">Driver List</a>
+                <a href="adriver.html">Add Driver</a>
+                <a href="danalytics.html">Driver Analytics</a>
+                <a href="payments.html">Payments</a>
+                <a href="crecords.html">Council Records</a>
+              </div>
+              <a href="bquote.html">Booking Quote</a>
+              <a href="qrecords.html">Quote Records</a>
+        <a href="bsms.html">Booking SMS</a>
+        <a href="webupload.html">website Uploads</a>
+        <a href="track.html">Live Tracking</a>
+        <a href="chat.html">Chatting Panel</a>
+        <a href="quick.html">Quick Metrics</a>
+        <a href="settings.html"><i class="fa fa-gear"></i> Settings</a>
+      </div>
+    
+    
+    
+          <section class="internal" >
+           <div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+          <form action="./chatting/log.php" method="post">
+<input type="text" name="name" value ="" placeholder="Enter Name" class="form-control" style="width:40%;">
+      <input name="msg" type="hidden" class="form-control" value="Logged in" style="width:20%;"><br>
+      <input type="submit" class="btn btn-success" target="_blank"  name="submit" value="start chat">
+     
+    </form>  
+       
+                </section>
+    
+    
+    
+    
+    <style>
+    .internal
+        {
+            padding:10px;
+            margin-top:100px;
+            margin-left:250px;
+        }
+           
+    </style>
+    
+    
+    
+    
+          <script>
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          var i;
+          
+          for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+            });
+          }
+          </script>
+  <script>
+  
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();   
+          });
+          </script>
+         
+                  <script>
+                          var elem = document.getElementById("html");
+                          function openFullscreen() {
+                            if (elem.requestFullscreen) {
+                              elem.requestFullscreen();
+                            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                              elem.mozRequestFullScreen();
+                            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                              elem.webkitRequestFullscreen();
+                            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                              elem.msRequestFullscreen();
+                            }
+                          }
+                          </script>
+                          <script></script>
+                          <script>
+                                $(document).ready(function(){
+                                  $("#myInput").on("keyup", function() {
+                                    var value = $(this).val().toLowerCase();
+                                    $("#myTable tr").filter(function() {
+                                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                  });
+                                });
+                                </script>
+     <script>$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})</script>
+        
+          </body></html>

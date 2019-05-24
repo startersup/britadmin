@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+  <title>Booking Analytics | Admin Panel</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   <a href="#" class="btn-expand-collapse"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" id="brandname" href="#"><span>Minicabee</span> Travel Solutions</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <div class="nav navbar-nav padleft">
+       <div class="row">
+<div class="col-md-12">
+  </div>
+       </div>
+    </div>
+       
+      <ul class="nav navbar-nav navbar-right navextra" >
+            <li><a data-toggle="tooltip" data-placement="bottom" title="Notification" href="#"><span class="fa fa-bell"></span> Notification</a></li>
+          <li><a data-toggle="tooltip" data-placement="bottom" title="Notification" href="#"><i class="fa fa-credit-card"></i> Payment Link</a></li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Settings" href="#"><span class="fa fa-gear"></span> Settings</a></li>
+        <li><a data-toggle="tooltip" data-placement="bottom" title="Logout" href="#"><span class="fa fa-power-off"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar-primary">
+  
+  <ul class="navbar-primary-menu">
+    <li>
+      <a href="./index.html">Dashboard</a>
+     <a href="./bookrecord.html">Booking Records</a>
+        <a href="./passrecord.html">Passenger Records</a>
+        <a class="dropdown-btn">Company Management <i class="fa fa-caret-down"></i></a>
+              <div class="dropdown-container">
+                  <a href="./bookanal.html">Booking Analytics</a>
+                <a href="./staffacc.html">Staff Accounts</a>
+                <a href="./prolist.html">Provider List</a>
+                <a href="./cprofit.html">Company Profit</a>
+                <a href="./fchange.html">Fare Changer</a>
+              </div>
+         <a class="dropdown-btn"> Drivers Management<i class="fa fa-caret-down"></i></a>
+              <div class="dropdown-container">
+                  <a href="./dlist.html">Driver List</a>
+                <a href="./adriver.html">Add Driver</a>
+                <a href="./danalytics.html">Driver Analytics</a>
+                <a href="./payments.html">Payments</a>
+                <a href="./crecords.html">Council Records</a>
+              </div>
+       <a href="bquote.html">Booking Quote</a>
+              <a href="./qrecords.html">Quote Records</a>
+        <a href="./bsms.html">Booking SMS</a>
+        <a href="./webupload.html">website Uploads</a>
+        <a href="./track.html">Live Tracking</a>
+        <a href="./chat.html">Chatting Panel</a>
+        <a href="./quick.html">Quick Metrics</a>
+        <a href="./settings.html"><i class="fa fa-gear"></i> Settings</a>
+
+    </li>
+    </ul>
+</nav>
+
+  <div class="main-content">
+           <div class="container1">
+      <div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+                <div id="my_div">
+       <span class="title">Add New Driver</span>
+       <table class="table table-user-information passtab drivetab">
+          <tbody>
+            <thead>
+              <td style="width:25%;"></td>
+              <td style="width:75%;"></td>
+            </thead>
+            <tr>
+              <td>Driver Name:</td>
+              <td><input class="controls" type="text" placeholder="Enter Driver Name"></td>
+            </tr>
+            <tr>
+              <td>Driver Email :</td>
+              <td><input class="controls" type="email"  placeholder="Enter Driver Email"></td>
+            </tr>
+            <tr>
+              <td>Driver Contact :</td>
+              <td><input class="controls" type="number"  placeholder="Enter Driver Contact Number"></td>
+            </tr>
+               <tr>
+              <td>Alternate Contact :</td>
+              <td><input class="controls" type="number"  placeholder="Enter Driver Contact Number"></td>
+            </tr>
+           <tr>
+              <td>Cab Type :</td>
+              <td><select id="pass" class="selectit" style=" width:70%;" name="np"> <option value="1" selected="">Saloon</option> <option value="2">Estate</option><option value="3">Mpv-4</option><option value="4">Mpv-6</option><option value="5">7 Seater</option><option value="6">8 seater</option>
+              </select></td>
+            </tr>
+                   <tr>
+              <td>Base Location :</td>
+              <td><input class="controls" data-live-search="true" id="autocomplete" name="pick" placeholder="Enter Base Location"  required="required"></td>
+            </tr>
+              <tr>
+              <td>Covering Locations : </td>
+              <td> <input class="controls"  name="drop"  placeholder="Enter Covering Areas Eg:heathrow, stansted" required="required"> </td>
+            </tr>
+                   <tr>
+              <td>Available Time: </td>
+              <td> <select id="pass" class="selectit"  width:70%; style=" width:70%; " name="np" data-toggle="tooltip" data-placement="auto" title="No Passengers "> <option value="1" selected="">24/7</option> <option value="2">Morning </option><option value="3">Night</option><option value="4">Weekends</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>Pickup Date & Time</td>
+              <td>
+                  <input id="datetimepicker" class="controls" type="text">
+                  </td>
+            </tr> 
+               
+                   
+ 
+</tbody></table> 
+ <button class="buttongreen">Add Driver</button>
+               </div></div></div>
+        <!--right modal-content starts here-->
+
+  
+      <script>
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          var i;
+          
+          for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+              } else {
+                dropdownContent.style.display = "block";
+              }
+            });
+          }
+          </script>
+  <script>
+  
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();   
+          });
+          </script>
+         
+                  <script>
+                          var elem = document.getElementById("html");
+                          function openFullscreen() {
+                            if (elem.requestFullscreen) {
+                              elem.requestFullscreen();
+                            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                              elem.mozRequestFullScreen();
+                            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                              elem.webkitRequestFullscreen();
+                            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                              elem.msRequestFullscreen();
+                            }
+                          }
+                          </script>
+                                <script>
+
+                                    var placeSearch, autocomplete,autocomplete2,autocomplete3;
+                              
+                                    function initAutocomplete() {
+                                      
+                                      autocomplete = new google.maps.places.Autocomplete(
+                                          /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+                                          {types: ['geocode'],componentRestrictions: {country: 'uk'}});
+                                        
+                                        
+                                      
+                                        
+                                      // When the user selects an address from the dropdown, populate the address
+                                      // fields in the form.
+                                      autocomplete.addListener('place_changed', fillInAddress);
+                                        
+                                        
+                              autocomplete2= new google.maps.places.Autocomplete(
+                                          /** @type {!HTMLInputElement} */(document.getElementById('autocomplete2')),
+                                          {types: ['geocode'],componentRestrictions: {country: 'uk'}});
+                                        
+                                        
+                              
+                              
+                                      // When the user selects an address from the dropdown, populate the address
+                                      // fields in the form.
+                                      autocomplete2.addListener('place_changed', fillInAddress);
+                                      
+                                        
+                                        autocomplete3= new google.maps.places.Autocomplete(
+                                          /** @type {!HTMLInputElement} */(document.getElementById('autocomplete3')),
+                                          {types: ['geocode'],componentRestrictions: {country: 'uk'}});
+                                        
+                                        
+                              
+                              
+                                      // When the user selects an address from the dropdown, populate the address
+                                      // fields in the form.
+                                      autocomplete3.addListener('place_changed', fillInAddress);
+                                        
+                                        
+                                    }
+                              
+                              
+                                    function fillInAddress() {
+                                      // Get the place details from the autocomplete object.
+                                      var place = autocomplete.getPlace();
+                              
+                                      for (var component in componentForm) {
+                                        document.getElementById(component).value = '';
+                                        document.getElementById(component).disabled = false;
+                                      }
+                              
+                                      // Get each component of the address from the place details
+                                      // and fill the corresponding field on the form.
+                                      for (var i = 0; i < place.address_components.length; i++) {
+                                        var addressType = place.address_components[i].types[0];
+                                        if (componentForm[addressType]) {
+                                          var val = place.address_components[i][componentForm[addressType]];
+                                          document.getElementById(addressType).value = val;
+                                        }
+                                      }
+                                        var place = autocomplete2.getPlace();
+                              
+                                      for (var component in componentForm) {
+                                        document.getElementById(component).value = '';
+                                        document.getElementById(component).disabled = false;
+                                      }
+                              
+                                      // Get each component of the address from the place details
+                                      // and fill the corresponding field on the form.
+                                      for (var i = 0; i < place.address_components.length; i++) {
+                                        var addressType = place.address_components[i].types[0];
+                                        if (componentForm[addressType]) {
+                                          var val = place.address_components[i][componentForm[addressType]];
+                                          document.getElementById(addressType).value = val;
+                                        }
+                                      }
+                                      
+                                          var place = autocomplete3.getPlace();
+                              
+                                      for (var component in componentForm) {
+                                        document.getElementById(component).value = '';
+                                        document.getElementById(component).disabled = false;
+                                      }
+                              
+                                      // Get each component of the address from the place details
+                                      // and fill the corresponding field on the form.
+                                      for (var i = 0; i < place.address_components.length; i++) {
+                                        var addressType = place.address_components[i].types[0];
+                                        if (componentForm[addressType]) {
+                                          var val = place.address_components[i][componentForm[addressType]];
+                                          document.getElementById(addressType).value = val;
+                                        }
+                                      }
+                                      
+                                      
+                                      
+                                    }
+                              
+                                      
+                              
+                                    
+                                      </script>
+                             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgJNbx7wr01p7h2a0psOsVieTc7Ge1LB8&libraries=places&callback=initAutocomplete"
+                                      async defer></script> 
+                                      <script>
+                                          $(document).ready(function() {
+                                              $.datetimepicker.setLocale('pt-EN');
+                                             $('#datetimepicker').datetimepicker();
+                                             step: 15 
+                                          });
+                                    </script>
+     <script>$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
+})</script>
+                                    <style>
+                                    .form-control
+                                    {
+                                      width:50%;
+                                      border-radius:none;
+                                     border:none;
+
+                                    }
+                                    </style>
+        
+          </body></html>
+
+ 
