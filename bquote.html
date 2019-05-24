@@ -1,137 +1,142 @@
 <!DOCTYPE html>
 <html lang="en" id="html">
 <head>
-  <title>Admin Panel</title>
+  <title>Booking Quote | Admin Panel</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
-<script src="http://cdn.craig.is/js/rainbow-custom.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" id="brandname" href="#">Minicabee <i class="fa fa-taxi"></i> Admin</a>
+   <a href="#" class="btn-expand-collapse"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" id="brandname" href="#"><span>Minicabee</span> Travel Solutions</a>
     </div>
     <div class="collapse navbar-collapse " id="myNavbar">
       <div class="nav navbar-nav padleft">
        <div class="row">
 <div class="col-md-12">
-    
-</div>
+  </div>
        </div>
     </div>
+       
       <ul class="nav navbar-nav navbar-right navextra" >
-            <li><a onclick="openFullscreen();"  data-toggle="tooltip" data-placement="bottom" title="Full Screen" href="#"><span class="fa fa-expand"></span> Full Screen</a></li>
             <li><a data-toggle="tooltip" data-placement="bottom" title="Notification" href="#"><span class="fa fa-bell"></span> Notification</a></li>
+          <li><a data-toggle="tooltip" data-placement="bottom" title="Notification" href="#"><i class="fa fa-credit-card"></i> Payment Link</a></li>
         <li><a data-toggle="tooltip" data-placement="bottom" title="Settings" href="#"><span class="fa fa-gear"></span> Settings</a></li>
         <li><a data-toggle="tooltip" data-placement="bottom" title="Logout" href="#"><span class="fa fa-power-off"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="sidenav">
-        <a href="index.html" class="active"><i class="fa fa-dashboard"></i> Dashboard</a>
-        <a href="bookrecord.html">Booking Records</a>
-        <a href="passrecord.html">Passenger Records</a>
-        <button class="dropdown-btn">Company Admin</button>
+<nav class="navbar-primary">
+  
+  <ul class="navbar-primary-menu">
+    <li>
+      <a href="./index.html">Dashboard</a>
+     <a href="./bookrecord.html">Booking Records</a>
+        <a href="./passrecord.html">Passenger Records</a>
+        <a class="dropdown-btn">Company Management <i class="fa fa-caret-down"></i></a>
               <div class="dropdown-container">
-                  <a href="bookanal.html">Booking Analytics</a>
-                <a href="staffacc.html">Staff Accounts</a>
-                <a href="prolist.html">Provider List</a>
-                <a href="cprofit.html">Company Profit</a>
-                <a href="fchange.html">Fare Changer</a>
+                  <a href="./bookanal.html">Booking Analytics</a>
+                <a href="./staffacc.html">Staff Accounts</a>
+                <a href="./prolist.html">Provider List</a>
+                <a href="./cprofit.html">Company Profit</a>
+                <a href="./fchange.html">Fare Changer</a>
               </div>
-              <button class="dropdown-btn">Driver Management</button>
+         <a class="dropdown-btn"> Drivers Management<i class="fa fa-caret-down"></i></a>
               <div class="dropdown-container">
-                <a href="dlist.html">Driver List</a>
-                <a href="adriver.html">Add Driver</a>
-                <a href="danalytics.html">Driver Analytics</a>
-                <a href="payments.html">Payments</a>
-                <a href="crecords.html">Council Records</a>
+                  <a href="./dlist.html">Driver List</a>
+                <a href="./adriver.html">Add Driver</a>
+                <a href="./danalytics.html">Driver Analytics</a>
+                <a href="./payments.html">Payments</a>
+                <a href="./crecords.html">Council Records</a>
               </div>
-              <a href="bquote.html">Booking Quote</a>
-              <a href="qrecords.html">Quote Records</a>
-        <a href="bsms.html">Booking SMS</a>
-        <a href="webupload.html">website Uploads</a>
-        <a href="track.html">Live Tracking</a>
-        <a href="chat.html">Chatting Panel</a>
-        <a href="quick.html">Quick Metrics</a>
-        <a href="settings.html"><i class="fa fa-gear"></i> Settings</a>
-      </div>
-      <section class="remaining container" >
-                     <div id="preloader">
+       <a href="bquote.html">Booking Quote</a>
+              <a href="./qrecords.html">Quote Records</a>
+        <a href="./bsms.html">Booking SMS</a>
+        <a href="./webupload.html">website Uploads</a>
+        <a href="./track.html">Live Tracking</a>
+        <a href="./chat.html">Chatting Panel</a>
+        <a href="./quick.html">Quick Metrics</a>
+        <a href="./settings.html"><i class="fa fa-gear"></i> Settings</a>
+
+    </li>
+    </ul>
+</nav>
+
+  <div class="main-content">
+           <div class="container1">
+      <div id="preloader">
   <div id="status">&nbsp;</div>
 </div>
        <span class="title">Booking Quote</span>
-       <table class="table table-user-information passtab">
+       <table class="table table-user-information passtab drivetab">
           <tbody>
             <thead>
               <td style="width:25%;"></td>
               <td style="width:75%;"></td>
             </thead>
             <tr>
-              <td>Passenger Name:</td>
-              <td><input class="form-control" type="text" placeholder="Enter Passenger Name"></td>
+              <td>Passenger Name :</td>
+              <td><input class="controls" type="text" placeholder="Enter Passenger Name"></td>
             </tr>
             <tr>
-              <td>Passenger Email:</td>
-              <td><input class="form-control" type="email"  placeholder="Enter Passenger Email"></td>
+              <td>Passenger Email :</td>
+              <td><input class="controls" type="email"  placeholder="Enter Passenger Email"></td>
             </tr>
             <tr>
-              <td>Passenger Contact:</td>
-              <td><input class="form-control" type="number"  placeholder="Enter Passenger Contact Number"></td>
+              <td>Passenger Contact :</td>
+              <td><input class="controls" type="number"  placeholder="Enter Passenger Contact Number"></td>
             </tr>
 
                    <tr>
-              <td>Pickup From:</td>
-              <td><input class="form-control" data-live-search="true" id="autocomplete" name="pick" placeholder="Pickup Postcode"  required="required"></td>
+              <td>Pickup From :</td>
+              <td><input class="controls" data-live-search="true" id="autocomplete" name="pick" placeholder="Pickup Postcode"  required="required"></td>
             </tr>
               <tr>
-              <td>Dropoff To: </td>
-              <td> <input class="form-control"  name="drop" id="autocomplete2"  placeholder="Dropoff Postcode" required="required"></td>
+              <td>Dropoff To : </td>
+              <td> <input class="controls"  name="drop" id="autocomplete2"  placeholder="Dropoff Postcode" required="required"></td>
             </tr>
             <tr>
-              <td>Pickup Date & Time</td>
+              <td>Pickup Date & Time :</td>
               <td>
-                  <input id="datetimepicker" class="form-control" type="text">
+                  <input id="datetimepicker" class="controls" type="text">
                   </td>
             </tr>
             <tr>
-                <td>Passengers</td>
-                <td> <select id="pass" class="form-control" style="font-family: 'Helvetica', FontAwesome; font-size: 20px;color:black; " name="np" data-toggle="tooltip" data-placement="auto" title="No Passengers "> <option value="1" selected="">1 </option> <option value="2">2 </option><option value="3">3 </option><option value="4">4 </option><option value="5">5 </option><option value="6">6 </option><option value="7">7 </option><option value="8">8 </option><option value="9">9 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option>
+                <td>Passengers :</td>
+                <td> <select id="pass" class="selectit" style=" width: 70%;"> <option value="1" selected="">1 </option> <option value="2">2 </option><option value="3">3 </option><option value="4">4 </option><option value="5">5 </option><option value="6">6 </option><option value="7">7 </option><option value="8">8 </option><option value="9">9 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option>
                 </select></td>
               </tr>
               <tr>
-                  <td>Luggages</td>
-                  <td> <select id="chlug" class="form-control" name="nl" style="font-family: 'Helvetica', FontAwesome; font-size: 18px;color:black; " data-toggle="tooltip" data-placement="auto" title="No of Checking Luggage"> <option value="0" selected="">0 </option> <option value="1">1 </option><option value="2">2 </option><option value="3">3 </option><option value="4">4 </option><option value="5">5 </option><option value="6">6 </option><option value="7">7 </option><option value="8">8 </option><option value="9">9 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option></select></td>
+                  <td>Luggages :</td>
+                  <td> <select id="chlug" class="selectit" style="width: 70%;" > <option value="0" selected="">0 </option> <option value="1">1 </option><option value="2">2 </option><option value="3">3 </option><option value="4">4 </option><option value="5">5 </option><option value="6">6 </option><option value="7">7 </option><option value="8">8 </option><option value="9">9 </option><option value="10">10 </option><option value="11">11 </option><option value="12">12 </option><option value="13">13 </option><option value="14">14 </option><option value="15">15 </option></select></td>
                 </tr>
             <tr>
-              <td>Cab Type</td>
-              <td><select id="pass" class="form-control"  name="np" data-toggle="tooltip" data-placement="auto" title="No Passengers "> <option value="1" selected="">Saloon</option> <option value="2">Estate</option><option value="3">Mpv-4</option><option value="4">Mpv-6</option><option value="5">7 Seater</option><option value="6">8 seater</option>
+              <td>Cab Type :</td>
+              <td><select id="pass" class="selectit" style="width: 70%;" > <option value="1" selected="">Saloon</option> <option value="2">Estate</option><option value="3">Mpv-4</option><option value="4">Mpv-6</option><option value="5">7 Seater</option><option value="6">8 seater</option>
               </select></td>
             </tr>
             <tr>
-                <td>Total Fare</td>
-                <td>£41</td>
+                <td>Total Fare :</td>
+                <td><input class="controls" type="text"  value="&pound 41"></td>
               </tr>
              
-                  <tr>
-                      <td><button class="btn btn-success">Book Now</button></td>
-                      <td><button class="btn btn-danger">Provide Quote</button></td>
-</tr> 
+                
 </tbody></table> 
-                      </section>
+               <button class="buttonblue">Quote Email</button>
+      </div></div>
         <!--right modal-content starts here-->
 
   
