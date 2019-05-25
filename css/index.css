@@ -4,7 +4,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 /* Track */
@@ -24,7 +24,7 @@
 /*scrollbar*/
 /*navbar*/
 body{
-    background-color:#e7e7e7;
+    background-color:#ffffff;
     overflow-x: hidden !important;
     font-family: 'Poppins', sans-serif;
 }
@@ -75,14 +75,15 @@ letter-spacing: 0.8px;
     left: 0px;
     position: fixed;
     top: 50px;
-   height:auto;
-    overflow-y: scroll;
+  max-height:100vh;
+      border-right:1px solid #f4f4f4;
+    overflow-y: scroll !important;
     font-family: 'Poppins', sans-serif;
     padding-top: 10px;
     border: none !important;
-    width: 250px;
+    width: 255px;
     z-index: 8;
-    overflow: hidden;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
@@ -99,6 +100,7 @@ letter-spacing: 0.8px;
     font-size:15px;
     text-decoration: none !important;
     font-weight: 500;
+        border-right:1px solid #f4f4f4;
       border-bottom:1px solid #f4f4f4;
     color: #000000;
 }
