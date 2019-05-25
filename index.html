@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" id="html">
 <head>
-  <title>Admin Panel</title>
+  <title>Bookings | Minicabee Travel Solutions</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/index.css">
@@ -97,7 +97,75 @@
 					</ul>
 					<div class="tab-content">
               <div class="tab-pane" id="tab_default_1">
-
+                  <div id="yes">
+                    <div class="row">
+                        <div class="col-xs-9">
+            <input type="text" id="myInput" class="controls" onkeyup="myFunction()" placeholder="Search for Bookings.." style="width:30%;margin-bottom:10px;" >
+            </div><div class="col-xs-3"><br>Showing 281 Records</div> </div>
+                    <table >
+                      <thead class="header">
+                        <th style="width:5%;">Ref Id</th>
+                        <th style="width:20%;">Pickup From</th>
+                        <th style="width:20%;">Dropoff To</th>
+                        <th style="width:15%;">Date /Time</th>
+                        <th style="width:15%;">Cab Type</th>
+                        <th style="width:10%;">Total Fare</th>
+                        <th style="width:10%;">Status</th>
+                        <th style="width:5%;">Action</th>
+                      </thead>
+                      <tbody id="myTable">
+                      <tr>
+                          <td>BRT1234</td>
+                          <td>Gatwick Airport South Terminal</td>
+                          <td>Heathrow Airport Terminal 5</td>
+                          <td>2018-11-15 19:20:00</td>
+                          <td>SALOON CAR x 1</td>
+                          <td>£ 7.00</td>
+                          <td><span style="color:#ffffff;background-color:green;font-weight:600;letter-spacing:0.5px;padding:5px;">Confirm</span></td>
+                          <td><button data-toggle="modal" data-target="#myModal2" class="btn btn-default">Edit</button></td>
+                        </tr>
+                      <tr>
+                          <td>BRT1234</td>
+                          <td>Gatwick Airport South Terminal</td>
+                          <td>Heathrow Airport Terminal 5</td>
+                          <td>2018-11-15 19:20:00</td>
+                          <td>SALOON CAR x 1</td>
+                          <td>£ 7.00</td>
+                          <td><span style="color:#ffffff;background-color:rgb(23, 23, 255);font-weight:600;letter-spacing:0.5px;padding:5px;">Booked</span></td>
+                          <td><button data-toggle="modal" data-target="#myModal2" class="btn btn-default">Edit</button></td>
+                        </tr>
+                      <tr>
+                          <td>BRT1234</td>
+                          <td>Gatwick Airport South Terminal</td>
+                          <td>Heathrow Airport Terminal 5</td>
+                          <td>2018-11-15 19:20:00</td>
+                          <td>SALOON CAR x 1</td>
+                          <td>£ 7.00</td>
+                          <td><span style="color:#ffffff;background-color:red;font-weight:600;letter-spacing:0.5px;padding:5px;">Bidded</span></td>
+                          <td><button class="btn btn-default">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>BRT1234</td>
+                            <td>Gatwick Airport South Terminal</td>
+                            <td>Heathrow Airport Terminal 5</td>
+                            <td>2018-11-15 19:20:00</td>
+                            <td>SALOON CAR x 1</td>
+                            <td>£ 7.00</td>
+                            <td><span style="color:#ffffff;background-color:green;font-weight:600;letter-spacing:0.5px;padding:5px;">Confirm</span></td>
+                            <td><button data-toggle="modal" data-target="#myModal2" class="btn btn-default">Edit</button></td>
+                          </tr>
+                          <tr>
+                              <td>BRT1234</td>
+                              <td>Gatwick Airport South Terminal</td>
+                              <td>Heathrow Airport Terminal 5</td>
+                              <td>2018-11-15 19:20:00</td>
+                              <td>SALOON CAR x 1</td>
+                              <td>£ 7.00</td>
+                              <td><span style="color:#ffffff;background-color:green;font-weight:600;letter-spacing:0.5px;padding:5px;">Confirm</span></td>
+                              <td><button data-toggle="modal" data-target="#myModal2" class="btn btn-default">Edit</button></td>
+                            </tr>
+                          </tbody>       </table>
+                  </div>
   </div>
 						<div class="tab-pane active" id="tab_default_2">
                 <div id="my_div">
